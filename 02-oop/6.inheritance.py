@@ -52,6 +52,7 @@ class Castle(Wall):
         self.towers = towers
 
     def get_tower_height(self):
+        # super().get_height()  called parent class method on child class.
         return self.get_height() * 2
 
 
