@@ -17,7 +17,7 @@ player_ages = [
     42
 ]
 
-#Lists can contain items of any data type, in our example above we have a List of strings.
+# Lists can contain items of any data type, in our example above we have a List of strings.
 
 # index
 # Each item in a list has an index that refers to its spot in the list.
@@ -25,7 +25,7 @@ names = ["Bob", "Lane", "Alice", "Breanna"]
 # index 0 = "bob"
 
 
-########### access specific item in a list. ###################  list[position]
+# access specific item in a list. ###################  list[position]
 best_languages = ["JavaScript", "Go", "Rust", "Python", "C"]
 # print(best_languages[1])
 # prints "Go", because index 1 was provided
@@ -52,19 +52,19 @@ last_vegetable = vegetables.pop()
 # vegetables = ['broccoli', 'cabbage', 'kale']
 # last_vegetable = 'tomato'
 
-#NOTE While .pop() typically removes the last item of a list, it can also be used to remove an item at a specific index. For example,
+# NOTE While .pop() typically removes the last item of a list, it can also be used to remove an item at a specific index. For example,
 # vegetables.pop(1) would remove 'cabbage' from the list. This can be useful when you need to remove items from other positions in your list.
 
 
 ########### iterate items in a list ###################
-sports = ['cricket',"score","tennis","rugby"]
+sports = ['cricket', "score", "tennis", "rugby"]
 
-for index in range(0,len(sports)):
+for index in range(0, len(sports)):
     #  print(sports[index])
     pass
 
 # other elegent way that provides by python
-for sport in sports :
+for sport in sports:
     #  print(sport)
     pass
 
@@ -83,12 +83,11 @@ remainder = 8 % 3
 # remainder = 2
 
 
-
 ########### slicing list   ###################
 # Python makes it easy to slice and dice lists to work only with the section you care about. One way to do this is to use the simple slicing operator, which is just a colon :.
 # my_list[ start : stop : step ]
 
-my_list  = [0,1,2,3,4,5,6,7,8,9]
+my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 list1 = my_list[1:5:2]
 # print("list-1",list1)   #list-1 [1, 3]
@@ -99,16 +98,16 @@ list1 = my_list[1:5:2]
 # print("list-6",my_list[:-2]) #list-5 [0, 1, 2, 3, 4, 5, 6, 7]
 
 # concatenated lists
-first =[1,3,4]
-two =[2,4,6]
+first = [1, 3, 4]
+two = [2, 4, 6]
 # print("concatated_list",first+two) #concatated_list [1, 3, 4, 2, 4, 6]
 
 # check item in a list "in"
 fruits = ["apple", "orange", "banana"]
-#print("banana" in fruits)# Prints: True
+# print("banana" in fruits)# Prints: True
 
 # delete items from a list
-nums  =[0,1,2,3,4,5,6,7]
+nums = [0, 1, 2, 3, 4, 5, 6, 7]
 # nums.pop(3)
 # print(nums)
 
@@ -139,3 +138,16 @@ print(nums)
 # Usage on lists	    Deletes by index or slice	              Removes by index (default last)
 # Usage on dicts	     Deletes by key	                           Removes by key and returns value
 # Deletes entire variable?	✅ Yes	                             ❌ No
+
+
+# list comphrehensive
+# [result for element in list]
+sample_list = [i for i in range(10)]
+
+print(sample_list)
+
+
+sample_list2 = [i for i in range(10) if i % 2 == 0]
+print(sample_list2)
+
+sample_list3 = [i * 2 for i in range(10) if i % 2 == 0]
