@@ -1,0 +1,13 @@
+{
+    "person": {
+        "name": "Marioa",
+        "age": 18,
+        "salary": "RS:200000",
+        "skills": [
+            "typescript",
+            "python"
+        ],
+        "blood_type": null,
+        "isSingle": true
+    }
+}
