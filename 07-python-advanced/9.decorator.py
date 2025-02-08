@@ -1,5 +1,6 @@
 from functools import wraps
 from time import perf_counter, sleep
+from typing import Callable
 
 
 def get_time(func):
@@ -26,3 +27,25 @@ def do_something(param):
 
 
 do_something('hello world')
+
+
+def repeat(times: int):
+    """Repeat function x amount of times"""
+    def decorator(func: Callable):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            value = None
+            for _ in range(times):
+                value = func(*args, **kwargs)
+
+            return value
+        return wrapper
+    return decorator
+
+
+@repeat(2)
+def fun():
+    print('Hello world')
+
+
+fun()
