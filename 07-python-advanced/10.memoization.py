@@ -1,4 +1,4 @@
-from functools import wraps
+from functools import wraps, cache
 from textwrap import wrap
 from time import perf_counter
 import sys
@@ -18,7 +18,8 @@ def memoize(func):
     return wrapper
 
 
-@memoize
+@cache
+# @memoize
 def fibonacci(n: int) -> int:
     if (n < 2):
         return n
